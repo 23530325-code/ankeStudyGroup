@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ankeStudyGroup.Models.StudyGroupMember>
+
+@{
+    ViewBag.Title = "Study Group Members";
+}
+
+<h2>Study Group Members</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().StudentNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Name)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Surname)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Email)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.StudentNumber</td>
+                <td>@member.Name</td>
+                <td>@member.Surname</td>
+                <td>@member.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
